@@ -1,0 +1,9 @@
+
+
+insert into city values (2, 'TaiPei'), (4, 'TaiChung'), (6, 'TaiNan');
+
+select employeeId, firstName, lastName, eMail, e.cityId, cityName  
+  from city as c 
+  join employee e on e.cityId = c.cityId
+
+
