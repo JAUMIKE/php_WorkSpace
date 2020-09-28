@@ -1,23 +1,13 @@
 <?php 
-  $myArray = array('numx' => 100,'numy' => 200, 'numz' => 300);
-  foreach($myArray as $key => $value){
-      echo  $value."<br>";
-  }
-  var_export($myArray);
-  echo "<br>";  
-  print_r($myArray);  
-
-  echo "<br>";
-  $sArray = array('春','夏','秋','冬');
-  foreach($sArray as $showSeason){
-      echo $showSeason;
-  }
-  echo "<br>";
-  for($i=0;$i<count($sArray);$i++){
-      echo $sArray[$i];
-  }
-  $iArray = range(1,10,2);
-  var_export($iArray);
+ require_once('ClassStudent01.php');
+ $obj01 = new Student("Bob");
+ $obj01->setData(01,"Bob","Man",100,90,80);
+ $obj01->showData();
+ $obj01 = Null;
+ $obj02 = new Student("Jen");
+ $obj02->setData(02,"Jen","Woman",90,95,100);
+ $obj02->showData();
+ $obj02 = Null;
 ?>
 
 

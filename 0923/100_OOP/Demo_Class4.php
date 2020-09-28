@@ -36,12 +36,15 @@ class CAnimal
 	}
 	
 }
-
+//cDog 繼承 CAnimal類別，並新增price()，使用要用到繼承父型的東西，要使用parent::來呼叫 
 class CDog extends CAnimal {
+	//加_變數名稱是為了要區分private、public的概念
 	private $_price = 0;
 	
 	function __construct($weightValue = 0, $priceValue = 0) {
+		//繼承物件
 		parent::__construct($weightValue);
+		//本身物件
 		$this->setPrice($priceValue);
 	}
 	
@@ -62,6 +65,7 @@ class CDog extends CAnimal {
 	{
 		return $this->_price;
 	}
+	
 
 }
 
